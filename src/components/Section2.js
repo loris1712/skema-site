@@ -33,8 +33,8 @@ const Section2 = () => {
         {/* Feature List */}
         <div className="space-y-6">
           {/* Feature 1 */}
-          <div className="flex items-start space-x-4">
-            <CheckCircle className="text-blue-500 w-6 h-6" />
+          <div className="flex space-x-4">
+            <CheckCircle className="text-blue-500 w-12 h-12" />
             <div>
               <h3 className="font-semibold text-lg text-black">Spontaneous Video Chats, Anytime</h3>
               <p className="text-gray-600">
@@ -45,7 +45,7 @@ const Section2 = () => {
 
           {/* Feature 2 */}
           <div className="flex items-start space-x-4">
-            <CheckCircle className="text-blue-500 w-6 h-6" />
+            <CheckCircle className="text-blue-500 w-12 h-12" />
             <div>
               <h3 className="font-semibold text-lg text-black">Decide in a Blink: Wink, Link, or Blink</h3>
               <p className="text-gray-600">
@@ -56,7 +56,7 @@ const Section2 = () => {
 
           {/* Feature 3 */}
           <div className="flex items-start space-x-4">
-            <CheckCircle className="text-blue-500 w-6 h-6" />
+            <CheckCircle className="text-blue-500 w-12 h-12" />
             <div>
               <h3 className="font-semibold text-lg text-black">Security You Can Trust</h3>
               <p className="text-gray-600">
