@@ -11,7 +11,7 @@ const Section7 = () => {
 
       <div className="absolute top-0 right-0 w-1/2 h-auto">
             <img 
-              src="/top-right-image.jpg" 
+              src="/top-right-image.png" 
               alt="Highlight" 
               className="w-full h-auto object-cover"
             />
@@ -31,7 +31,7 @@ const Section7 = () => {
           {/* Immagine in basso a sinistra */}
           <div className="absolute bottom-0 left-0 w-1/3 h-auto">
             <img 
-              src="/bottom-left-image.jpg" 
+              src="/bottom-left-image.png" 
               alt="Feature" 
               className="w-full h-auto object-cover"
             />
