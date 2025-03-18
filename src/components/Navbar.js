@@ -32,17 +32,18 @@ const Navbar = () => {
     >
       {/* Logo */}
       <div className="flex items-center space-x-6">
-        <div className="flex items-center space-x-2">
-          <img src="/logo.png" alt="Blink Logo" className="w-8 h-8" />
-          <span className="text-2xl font-black text-black">Blink</span>
-        </div>
+        <a href="/">
+          <div className="flex items-center space-x-2">
+            <img src="/logo.png" alt="Blink Logo" className="w-8 h-8" />
+            <span className="text-2xl font-black text-black">Blink</span>
+          </div>
+        </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
-          <a href="#" className="text-black font-medium hover:text-[#387FF7]">Home</a>
-          <a href="#" className="text-black font-medium hover:text-[#387FF7]">About Us</a>
-          <a href="#" className="text-black font-medium hover:text-[#387FF7]">Pricing</a>
-          <a href="#" className="text-black font-medium hover:text-[#387FF7]">Features</a>
+          <a href="/" className="text-black font-medium hover:text-[#387FF7]">Home</a>
+          <a href="#faq" className="text-black font-medium hover:text-[#387FF7]">FAQ</a>
+          <a href="#features" className="text-black font-medium hover:text-[#387FF7]">Features</a>
         </div>
       </div>
 

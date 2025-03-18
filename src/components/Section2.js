@@ -3,7 +3,7 @@ import { CheckCircle } from 'lucide-react'; // Example icon, replace with your p
 
 const Section2 = () => {
   return (
-    <section className="flex md:flex-row flex-col-reverse md:flex-row items-center gap-8 p-8 bg-white relative">
+    <section className="flex md:flex-row flex-col-reverse md:flex-row items-center gap-8 p-8 bg-white relative" id="features">
       {/* Left Image */}
 
       <div className="flex items-center space-x-2" style={{ position: 'absolute', top: '0%', left: '5%'}}>

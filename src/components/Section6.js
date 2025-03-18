@@ -11,7 +11,7 @@ const faq = [
 
 const Section6 = () => {
   return (
-    <section className="bg-white p-8 md:px-24 relative">
+    <section className="bg-white p-8 md:px-24 relative" id="faq">
       <p className="text-sm uppercase tracking-wider text-blue-500 font-semibold text-left">FAQ</p>
       <h2 className="text-3xl font-bold text-black mb-8 text-left capitalize">Frequently asked questions</h2>
 
