@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Blink",
-  description: "Blink",
+  title: "Skema - Dai tuoi appunti alla conoscenza, in un istante.",
+  description: "Trasforma i Tuoi Appunti in Mappe Concettuali",
 };
 
 export default function RootLayout({ children }) {

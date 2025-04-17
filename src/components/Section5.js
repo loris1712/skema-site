@@ -55,7 +55,7 @@ const Section5 = () => {
 
         {/* Title */}
         <h2 className="text-3xl capitalize md:w-[20%] mx-auto font-bold text-black mt-4 mb-8">
-        what our users say about us?
+        Cosa ne pensano gli utenti di Skema?
         </h2>
     </div>
       <div className='flex md:flex-row flex-col items-center '>

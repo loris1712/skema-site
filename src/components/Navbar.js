@@ -34,16 +34,16 @@ const Navbar = () => {
       <div className="flex items-center space-x-6">
         <a href="/">
           <div className="flex items-center space-x-2">
-            <img src="/logo.png" alt="Blink Logo" className="w-8 h-8" />
-            <span className="text-2xl font-black text-black">Blink</span>
+            <img src="/logo.png" alt="Blink Logo" className="w-12 h-14" />
+            <span className="text-2xl font-black text-black">Skema</span>
           </div>
         </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
           <a href="/" className="text-black font-medium hover:text-[#387FF7]">Home</a>
-          <a href="#faq" className="text-black font-medium hover:text-[#387FF7]">FAQ</a>
           <a href="#features" className="text-black font-medium hover:text-[#387FF7]">Features</a>
+          <a href="#faq" className="text-black font-medium hover:text-[#387FF7]">FAQ</a>
         </div>
       </div>
 
@@ -61,12 +61,11 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white shadow-md md:hidden" style={{zIndex: 2}}>
+        <div className="absolute top-16 left-0 w-full bg-white shadow-md md:hidden" style={{zIndex: 20}}>
           <div className="flex flex-col items-center space-y-4 py-4">
             <a href="#" className="text-black font-medium hover:text-blue-600">Home</a>
-            <a href="#" className="text-black font-medium hover:text-blue-600">About Us</a>
-            <a href="#" className="text-black font-medium hover:text-blue-600">Pricing</a>
-            <a href="#" className="text-black font-medium hover:text-blue-600">Features</a>
+            <a href="#features" className="text-black font-medium hover:text-blue-600">Features</a>
+            <a href="#faq" className="text-black font-medium hover:text-blue-600">FAQ</a>
             <button className="px-6 py-3 text-white bg-black rounded-lg hover:bg-gray-800">Download</button>
           </div>
         </div>
