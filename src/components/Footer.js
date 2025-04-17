@@ -39,16 +39,6 @@ export default function Footer() {
             <li><a href="/#faq" className="hover:underline">FAQ</a></li>
           </ul>
         </div>
-
-        {/* Legal Column */}
-        <div style={{width: 'fit-content'}}>
-          <h3 className="font-bold text-[24px] mb-4">Legal</h3>
-          <ul className="space-y-2">
-            <li><a href="#" className="hover:underline">Terms of Use</a></li>
-            <li><a href="#" className="hover:underline">Privacy Policy</a></li>
-            <li><a href="#" className="hover:underline">Cookie Policy</a></li>
-          </ul>
-        </div>
         </div>
       </div>
 
