@@ -8,6 +8,7 @@ export default function Section1() {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [instagram, setInstagram] = useState('');
+  const [codice, setCodice] = useState('');
   const [telefono, setTelefono] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -31,7 +32,7 @@ export default function Section1() {
       const { data, error } = await supabase
         .from('users')
         .insert([
-          { nome, email, instagram, telefono }
+          { nome, email, codice, instagram, telefono }
         ]);
 
       if (error) {
@@ -41,7 +42,8 @@ export default function Section1() {
       }
 
       // Successo, reindirizza al link App Store iOS
-      setIsRedirecting(true); // Set flag to indicate redirect
+      alert("Registrazione effettuata");
+      //setIsRedirecting(true); // Set flag to indicate redirect
     } catch (err) {
       console.error(err);
       setErrorMessage('C\'è stato un errore durante l\'invio dei dati.');
@@ -97,7 +99,18 @@ export default function Section1() {
           </div>
 
           <div>
-            <label htmlFor="instagram" className="block text-sm font-medium text-gray-700">Instagram (opzionale)</label>
+            <label htmlFor="instagram" className="block text-sm font-medium text-gray-700">Codice Universitá</label>
+            <input
+              type="text"
+              id="codice"
+              value={codice}
+              onChange={(e) => setCodice(e.target.value)}
+              className="mt-1 block w-full px-4 py-2 border rounded-md"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="instagram" className="block text-sm font-medium text-gray-700">Instagram</label>
             <input
               type="text"
               id="instagram"
