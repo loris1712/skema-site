@@ -11,7 +11,8 @@ export default function Section1() {
           Il tuo nuovo alleato AI per studiare all’università
         </h1>
         <p className="text-lg md:text-xl">
-          Traduci documenti Word, PDF e audio in mappe concettuali pronte per studiare all’università. Skema App, il tuo alleato smart per esami e riassunti.        </p>
+          Registra le lezioni, ottieni testi ordinati e trasformali in mappe concettuali chiare. Skema App, il tuo alleato smart per esami e riassunti
+        </p>
         <div className="flex space-x-4 mt-4">
           {/* Get Started Button */}
           <button className="flex items-center px-6 py-3 text-white bg-black rounded-md hover:bg-[#387FF7]">

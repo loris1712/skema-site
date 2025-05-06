@@ -19,7 +19,7 @@ const faq = [
   },
   {
     question: "Serve installare qualcosa per usarlo?",
-    answer: "No. Skema è una piattaforma online: funziona direttamente dal browser, sia su computer che da mobile."
+    answer: "App mobile su iOS e Android."
   },
   {
     question: "Quanto costa usare Skema?",

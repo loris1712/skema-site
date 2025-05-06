@@ -20,8 +20,8 @@ const Section2 = () => {
 
               </div>
               <p className="text-gray-600 mt-4">
-                Registrare una lezione, un seminario o una conferenza è facile. Il difficile viene dopo, quando bisogna riascoltare tutto e prendere appunti. Skema ti semplifica la vita: basta caricare un file audio o video, e in pochi minuti ottieni una trascrizione dettagliata e ben strutturata. Non solo parole trascritte, ma anche una suddivisione logica in paragrafi e argomenti, pronta per essere letta, evidenziata o studiata.
-              </p>
+              Rivoluzionaria per la sua semplicità d’uso, Skema parte da una registrazione audio e ti offre due opzioni:
+              una trascrizione sintetica, chiara e immediata, oppure una versione tecnica, arricchita con fonti accademiche e contenuti di approfondimento.              </p>
             </div>
           </div>
         </div>
