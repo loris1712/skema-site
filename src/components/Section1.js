@@ -15,14 +15,11 @@ export default function Section1() {
         </p>
         <div className="flex space-x-4 mt-4">
           {/* Get Started Button */}
-          <button className="flex items-center px-6 py-3 text-white bg-black rounded-md hover:bg-[#387FF7]">
-            Download iOS <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-4 h-4 ml-2 fill-white"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
-          </button>
-
-          {/* Learn More Button */}
-          <button className="flex items-center px-6 py-3 rounded-md hover:bg-gray-100">
-            Download Android <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-4 h-4 ml-2 fill-black"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
-          </button>
+          <a href="https://apps.apple.com/it/app/skema-app/id6744457170?l=en-GB">
+            <button className="flex items-center px-6 py-3 text-white bg-black rounded-md hover:bg-[#387FF7]">
+              Download iOS <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-4 h-4 ml-2 fill-white"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+            </button>
+          </a>
         </div>
       </div>
 
