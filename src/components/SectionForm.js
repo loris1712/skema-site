@@ -2,11 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import { supabase } from "@/lib/supabaseClient";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "@/lib/firebaseConfig";
 
 export default function Section1() {
-  // State per i campi del form
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [instagram, setInstagram] = useState('');
   const [codice, setCodice] = useState('');
   const [telefono, setTelefono] = useState('');
@@ -14,48 +16,55 @@ export default function Section1() {
   const [errorMessage, setErrorMessage] = useState('');
   const [isRedirecting, setIsRedirecting] = useState(false);
 
-  // Funzione per gestire l'invio del form
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Verifica che tutti i campi siano validi
-    if (!nome || !email || !telefono) {
-      setErrorMessage('Tutti i campi sono obbligatori.');
+    if (!nome || !email || !password || !telefono) {
+      setErrorMessage('Tutti i campi obbligatori devono essere compilati.');
       return;
     }
 
     setIsSubmitting(true);
-    setErrorMessage(''); // Resetta l'errore
+    setErrorMessage('');
 
     try {
-      // Salvataggio dei dati su Supabase
-      const { data, error } = await supabase
+      // 1. Registrazione Firebase
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const uidFirebase = userCredential.user.uid;
+
+      // 2. Salvataggio su Supabase
+      const { error } = await supabase
         .from('users')
         .insert([
-          { nome, email, codice, instagram, telefono }
+          {
+            uidFirebase,
+            nome,
+            email,
+            codice,
+            instagram,
+            telefono
+          }
         ]);
 
       if (error) {
         console.error(error);
-        setErrorMessage('C\'è stato un problema con il salvataggio dei dati.');
+        setErrorMessage('Errore nel salvataggio dei dati su Supabase.');
         return;
       }
 
-      // Successo, reindirizza al link App Store iOS
-      alert("Registrazione effettuata");
-      //setIsRedirecting(true); // Set flag to indicate redirect
+      alert("Registrazione completata!");
+      setIsRedirecting(true);
     } catch (err) {
       console.error(err);
-      setErrorMessage('C\'è stato un errore durante l\'invio dei dati.');
+      setErrorMessage('Errore durante la registrazione. Email forse già registrata.');
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  // UseEffect to handle client-side redirect
   useEffect(() => {
     if (isRedirecting) {
-      window.location.href = 'https://apps.apple.com/us/app/skema/idXXXXXXXX'; // Sostituisci con il link effettivo dell'app
+      window.location.href = 'https://apps.apple.com/it/app/skema-app/id6744457170?l=en-GB';
     }
   }, [isRedirecting]);
 
@@ -99,7 +108,19 @@ export default function Section1() {
           </div>
 
           <div>
-            <label htmlFor="instagram" className="block text-sm font-medium text-gray-700">Codice Universitá</label>
+            <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              className="mt-1 block w-full px-4 py-2 border rounded-md"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="codice" className="block text-sm font-medium text-gray-700">Codice Università</label>
             <input
               type="text"
               id="codice"
